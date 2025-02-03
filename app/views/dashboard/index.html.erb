@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bitsecure</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link rel="stylesheet" href="bitsecure.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+  <div class="floating">
+      <div class="blue"></div>
+      <div class="green"></div>
+  </div>
+
+  <div class="firstwork">
+  <div class="container">
+    <!-- First Row: Profile and Registration -->
+    <div class="row">
+      <div class="item">
+        <div class="icon"> <i class="fas fa-user"></i>
+        </div>
+        <div class="text">
+          <div class="title">Welcome</div>
+          <div class="subtitle"><%= current_user.username.present? ? current_user.username : current_user.email %>!</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="icon registration"><i class="fas fa-clipboard-list"></i>
+        </div>
+        <div class="text">
+          <div class="title registration">Registration</div>
+          <div class="subtitle2"><%= current_user.created_at.strftime('%B %d, %Y') %>
+</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Row: Security and Logout -->
+    <div class="row">
+      <div class="item item2">
+        <div class="icon security"><i class="fas fa-shield-alt"></i>
+        </div>
+        <div class="text">
+          <div class="title newtest">Security</div>
+        </div>
+      </div>
+      <div class="item ">
+        <div class="icon logout"><i class="fas fa-door-open"></i>
+        </div>
+        <div class="text">
+          <div class="title"><%= link_to 'Account/Logout', destroy_user_session_path, method: :get %>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="sectiond">
+    <div>
+    <h2>Account</h2> 
+    <p><span class="text3">Home</span> <span class="text5">&gt;</span> <span class="text4">Account</span></p>
+  </div>
+    
+    <div class="search-bar-container">
+      <i class="fas fa-globe icon2"></i>
+     <!-- <input type="text" placeholder="Search here..."> -->
+
+     <input type="text" class="copy-input" id="copyText" value="http://bitsecure.org//?ref=user32145442"  readonly>
+     <button class="copy-btn" onclick="copyToClipboard()">
+         📋
+     </button>
+
+     <script>
+      function copyToClipboard() {
+          var copyText = document.getElementById("copyText");
+          navigator.clipboard.writeText(copyText.value).then(() => {
+              alert("Copied: " + copyText.value);
+          }).catch(err => {
+              console.error("Error copying text: ", err);
+          });
+      }
+  </script> 
+    
+  </div>
+
+</div>
+
+<div class="sectionf">
+<div class="dropdown">
+  <button class="dropdown-button"><i class="fas fa-user" style="margin-right:5px ;"></i> Member</button>
+  <div class="dropdown-menu">
+    <a href="#"><i class="fas fa-user"></i> Profile</a>
+    <a href="#"><i class="fas fa-cog"></i> Settings</a>
+    <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropdown-button"><i class="fas fa-wallet" style="margin-right:5px ;"></i> Deposits</button>
+  <div class="dropdown-menu">
+    <a href="#"><i class="fas fa-wallet"></i> View Deposits</a>
+    <a href="#"><i class="fas fa-plus-circle"></i> Add Deposit</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropdown-button"> <i class="fas fa-hand-holding-usd" style="margin-right:5px ;"></i> Withdrawals</button>
+  <div class="dropdown-menu">
+    <a href="#"><i class="fas fa-money-bill-wave"></i> View Withdrawals</a>
+    <a href="#"><i class="fas fa-hand-holding-usd"></i> Request Withdrawal</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropdown-buttn"><%= link_to 'Sign Out', destroy_user_session_path, method: :get %>
+</button>
+</div>
+
+</div>
+<script>
+  // Handle dropdown toggle
+  document.querySelectorAll('.dropdown-button').forEach(button => {
+    button.addEventListener('click', function () {
+      const dropdown = this.parentElement;
+      dropdown.classList.toggle('active');
+      document.querySelectorAll('.dropdown').forEach(otherDropdown => {
+        if (otherDropdown !== dropdown) {
+          otherDropdown.classList.remove('active');
+        }
+      });
+    });
+  });
+
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.dropdown')) {
+      document.querySelectorAll('.dropdown').forEach(dropdown => {
+        dropdown.classList.remove('active');
+      });
+    }
+  });
+</script>
+
+<!-- Font Awesome Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<section class="newsection">
+  <div class="dashline">
+  </div>
+
+</section>
+<h1 class=" sectionh1">Account Details</h1>
+
+
+<div class="boxpriced">
+  <div class="caja-contenedor">
+    <div class="caja">
+        <h3>Account Balance</h3>
+        <div class="cantidad">0.00<span style="font-size: 0.6em;">$</span></div>
+        <button>Deposit Now</button>
+    </div>
+    <div class="caja">
+        <h3>Withdraw</h3>
+        <div class="cantidad">0.00<span style="font-size: 0.6em;">$</span></div>
+        <button>Withdraw Now</button>
+    </div>
+    <div class="caja">
+        <h3>Earned Total</h3>
+        <div class="cantidad">0.00<span style="font-size: 0.6em;">$</span></div>
+        <button>View Details</button>
+    </div>
+</div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+      const section = document.querySelector('.caja-contenedor');
+
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  section.classList.add('visible');
+              }
+          });
+      }, { threshold: 0.1 });
+
+      observer.observe(section);
+  });
+</script>
+
+<section class="newsection">
+  <div class="dashline">
+  </div>
+
+</section>
+<h1 class=" sectionh1">Chart Overview</h1>
+
+<div class="bodyna">
+  <div class="conteneur-graphe" id="chart-container">
+    <h2>Dépôts et Retraits (Janvier - Décembre)</h2>
+    <canvas id="graphe"></canvas>
+  </div>
+</div>
+
+<script>
+  // Initialize Chart.js
+  const ctx = document.getElementById('graphe').getContext('2d');
+  const data = {
+    labels: [
+      "Janvier",
+      "Février",
+      "Mars",
+      "Avril",
+      "Mai",
+      "Juin",
+      "Juillet",
+      "Août",
+      "Septembre",
+      "Octobre",
+      "Novembre",
+      "Décembre",
+    ],
+    datasets: [
+      {
+        label: "Dépôts",
+        data: [1200, 1500, 1100, 1800, 2000, 2500, 2200, 2400, 2100, 2300, 2500, 2700],
+        backgroundColor: "rgba(75, 192, 192, 0.8)",
+        borderRadius: 8,
+        borderSkipped: false,
+      },
+      {
+        label: "Retraits",
+        data: [800, 1000, 700, 900, 1200, 1400, 1300, 1100, 1200, 1000, 900, 1100],
+        backgroundColor: "rgba(255, 99, 132, 0.8)",
+        borderRadius: 8,
+        borderSkipped: false,
+      },
+    ],
+  };
+
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: "top",
+        labels: {
+          font: {
+            size: 14,
+            weight: "bold",
+          },
+        },
+      },
+      tooltip: {
+        callbacks: {
+          label: (tooltipItem) => {
+            return `$${tooltipItem.raw}`;
+          },
+        },
+      },
+    },
+    scales: {
+      x: {
+        grid: {
+          display: false,
+        },
+        ticks: {
+          font: {
+            size: 12,
+          },
+        },
+      },
+      y: {
+        ticks: {
+          callback: (value) => `$${value}`,
+          font: {
+            size: 12,
+          },
+        },
+      },
+    },
+  };
+
+  new Chart(ctx, {
+    type: 'bar',
+    data,
+    options,
+  });
+
+  // Scroll Animation Using Intersection Observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const container = entry.target;
+      if (entry.isIntersecting) {
+        container.classList.add('visible'); // Add visible class when in view
+        observer.unobserve(container); // Stop observing once animated
+      }
+    });
+  });
+
+  const chartContainer = document.getElementById('chart-container');
+  observer.observe(chartContainer);
+</script>
+
+<div class="bodyama">
+  <div class="stats-container">
+    <div class="stat-card">
+      <div class="icon icon-dark-blue"><i class="fas fa-wifi"></i></div>
+      <div class="value">$0.00</div>
+      <div class="label">Total</div>
+    </div>
+    <div class="stat-card">
+      <div class="icon icon-dark-blue"><i class="fas fa-hourglass-half"></i></div>
+      <div class="value">$n/a</div>
+      <div class="label">Last</div>
+    </div>
+    <div class="stat-card">
+      <div class="icon icon-dark-blue"><i class="fas fa-plus"></i></div>
+      <div class="value">$0.00</div>
+      <div class="label">Active</div>
+    </div>
+  </div>
+</div>
+
+<div class="secon-las">
+<section class="newsection">
+  <div class="dashline">
+  </div>
+
+</section>
+<h1 class=" sectionh1">Main Account Balance</h1>
+<h1 class=" sectionh1"><span style="font-size: 35px; font-weight: bold; ">$ </span>  <span style="font-size: 50px; font-weight: bolder;">0.00 </span> <span style="font-size: large; font-weight: bold; ">USD</span></h1>
+</div>
+
+<div class=" bodywa">
+
+  <footer>
+    <div>&copy; 2019-2020 <span style="color: blue;">Bitrust Limited. </span> All Rights Reserved.
+      <a style="color: orange; text-decoration: none;" href="#news">News</a>
+      <a style="color: orange; text-decoration: none;" href="#terms">Terms & Conditions</a>
+      <a style="color: orange; text-decoration: none;" href="#support">Support</a></div>
+  </footer>
+
+</div>
+</body>
+</html>
+
+
