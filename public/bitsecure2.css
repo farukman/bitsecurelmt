@@ -8,8 +8,10 @@
 
 
     .navbar {
-        background-color: rgba(255, 255, 255, 0.5);
+        background: transparent;
         backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.5); /* White semi-transparent border */
+        
         -webkit-backdrop-filter: blur(10px);            
         color: white;
         padding: 10px 20px;
@@ -46,6 +48,7 @@
         font-size: 30px;
         padding: 10px;
         cursor: pointer;
+        z-index:1300;
     }
 
     .mobile-menu {
