@@ -449,7 +449,7 @@ font-weight: 600;
 .whatsapp-container {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 10px;
     text-align: center;
     width: 120px; /* Increased width for large text */
 }
