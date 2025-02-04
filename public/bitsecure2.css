@@ -433,3 +433,15 @@ color: #444;
 font-weight: 600;
 }
 
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 2s ease-out, transform 1s ease-out;
+}
+
+/* When visible */
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

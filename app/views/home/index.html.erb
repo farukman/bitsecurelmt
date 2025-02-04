@@ -50,13 +50,13 @@
         </div>  
     </section>
 
-    <section class="section2">
+    <section class="section2  reveal">
         <div class="section2content">
 
         </div>
     </section>
 
-    <section class="section3">
+    <section class="section3  reveal"> 
           <div class="section3content1">
              <h1>BUY OUR SHARES</h1>
              <h2>Bitrust Limited gives a share equity of minimum of $100, buy our shares and become one of our preferred shareholders.</h2>
@@ -65,12 +65,12 @@
             <li>Team of professionals ready to help you with any related questions 24/7.   </li>
             <button>View Nssmc</button>
             </div>
-          <div class="section3content2">
+          <div class="section3content2 ">
              <img src="Screenshot_4-1-2025_54418_bitrustlimited.org-removebg-preview.png" alt="">
           </div>
     </section>
 
-    <section class="section4">
+    <section class="section4  reveal">
        <div class="section4content1">
           <video src="https://bitrustlimited.org/video.mp4"></video>
        </div>
@@ -81,7 +81,7 @@
        </div>
     </section>
 
-    <section class="section5">
+    <section class="section5 reveal">
      <div class="section5content">   <h1>our pricing plan</h1> </div>
   <div class="container">
     <div class="price-box">
@@ -219,7 +219,7 @@
   </div>
     </section>
 
-    <section class="section6"> 
+    <section class="section6 reveal"> 
         <h2>SPONSORED:</h2>
 <div class="section6content">
             <img src="coinbase.png" alt="">
@@ -227,7 +227,7 @@
          </div>
     </section>
 
-    <section class="section7">
+    <section class="section7 reveal">
         <div class="section7content">
           <p>NEW</p>
 
@@ -246,23 +246,54 @@
 
 </section>
 
-<section class="section8">
+<section class="section8 reveal">
      <h1>Explore a new way to invest <br>  10%</h1>
         <p>Our Affiliations</p>
         <button>  <%= link_to 'Sign Up now!', new_user_registration_path %> 
 </button>
 </section>
 
-<section class="section9content">
+<section class="section9content reveal">
     <img class="ios1" src="ios.png" alt=""> <img class="andriod1" src="android (1).svg" alt="">
 </section>
 
-<section class="section10">
+<section class="section10 reveal">
 <img src="logotrust.png.crdownload" alt="">
 <h2>Bitsecure Limited Is A Crycptocurrency Insurance Company Sponsored By Blockchain & Coinbase.</h2>
 <p>Address: 160 Kemp House City Road London.</p>
 </section>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll(".reveal");
+
+    function revealOnScroll() {
+        elements.forEach((element) => {
+            const rect = element.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.85) {
+                element.classList.add("visible");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll(); // Trigger on load
+});
+
+</script>
+
+<div class="whatsapp-container">
+    <!-- SVG for curved text -->
+    <svg viewBox="0 0 200 100" class="curved-text">
+        <path id="curve" d="M 10 80 C 60 10, 140 10, 190 80" fill="transparent"/>
+
+    </svg>
+    
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+</div>
 
 </body>
 </html>
