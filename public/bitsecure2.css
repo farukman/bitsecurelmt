@@ -18,7 +18,7 @@
         align-items: center;
         position: fixed;
         width: 100%;
-        height: 80px;
+        height: 60px;
         top: 0;
         z-index: 1000;
     }
@@ -63,7 +63,9 @@
         transform: translateX(-100%);
         justify-content: center;
         align-items: center;
-        text-align: center;            
+        text-align: center;   
+        z-index: 1200;
+         
     }
 
     .mobile-menu.active {
