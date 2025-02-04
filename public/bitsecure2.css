@@ -49,6 +49,8 @@
         padding: 10px;
         cursor: pointer;
         z-index:1300;
+        margin-right: 30px;
+        text-align: right;
     }
 
     .mobile-menu {
@@ -86,8 +88,12 @@
 
     @media (max-width: 768px) {
         .navbar {
-            position: relative;
-        }
+            background: transparent;
+            -webkit-backdrop-filter: blur(10px);            
+
+         backdrop-filter: blur(10px);
+border: 2px solid rgba(255, 255, 255, 0.5); /* White semi-transparent border */
+    }
 
         .menu {
             display: none;
