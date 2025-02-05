@@ -358,7 +358,6 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   kamal
-  mysql2
   propshaft
   puma (>= 5.0)
   rails (~> 8.0.1)
