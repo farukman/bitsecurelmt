@@ -44,7 +44,7 @@
         display: none;
         background-color: transparent;
         border: none;
-        color: orange;
+        color: black;
         font-size: 30px;
         padding: 10px;
         cursor: pointer;
@@ -478,4 +478,8 @@ font-weight: 600;
 
 .whatsapp-button img:hover {
     transform: scale(1.1);
+}
+.navba button{
+    border-radius: 15px;
+    background-color: orange;
 }
