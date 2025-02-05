@@ -538,4 +538,25 @@ body {
            border: none;
    
        }
-   
+       .whatsapp-container {
+        position: fixed;
+        bottom: 20px;
+        left: 10px;
+        text-align: center;
+        width: 120px; /* Increased width for large text */
+    }
+    
+    /* WhatsApp button */
+    .whatsapp-button img {
+        width: 50px; /* Slightly bigger icon */
+        height: 50px;
+        border-radius: 50%;
+        background: #25D366;
+        padding: 5px;
+        transition: transform 0.3s ease-in-out;
+        margin-right: 30px;
+    }
+    
+    .whatsapp-button img:hover {
+        transform: scale(1.1);
+    }

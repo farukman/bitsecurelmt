@@ -1,10 +1,97 @@
-<h2>Log in</h2>
 
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  .signup-container {
+    background: transparent;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    text-align: center;
+    max-width: 325px;
+  }
+  .signup-container h2 {
+    margin-bottom: 16px;
+    color: rgb(2, 2, 49);
+  }
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .signup-form input, .signup-form select {
+    margin-bottom: 12px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 90%;
+  }
+  .btn {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    
+  }
+  .signup-form .btn:hover {
+    background-color: #162c6c;
+  }
+  .login-link {
+    margin-top: 12px;
+    font-size: 14px;
+  }
+  .login-link a {
+    color: #1e3a8a;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  .footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+  }
+</style>
+
+
+<h2>Bitscure | Login</h2>
+
+<div class="signup-container">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
+
+ <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
+
+
+
 
   <div class="field">
     <%= f.label :password %><br />
@@ -19,8 +106,21 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in" ,  class: "btn" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+</div>
+
+
+
+<div class="footer">
+  BitSecure &copy; 2019 - 2025
+</div>
+
+
+</body>
+</html>
+

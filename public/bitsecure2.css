@@ -50,7 +50,8 @@
         cursor: pointer;
         z-index:1300;
         margin-right: 30px;
-        text-align: right;
+        text-decoration:none;
+        
     }
 
     .mobile-menu {
@@ -117,7 +118,7 @@ border: 2px solid rgba(255, 255, 255, 0.5); /* White semi-transparent border */
     .section1 {
         background-size: cover;
     background-position: center;
-height: 75vh;   
+height: 80vh;   
 }
 }
 
@@ -479,7 +480,12 @@ font-weight: 600;
 .whatsapp-button img:hover {
     transform: scale(1.1);
 }
-.navba button{
-    border-radius: 15px;
+
+.grndpaw{
+    padding: 20px;
     background-color: orange;
+    border-style:none;
+    border: none;
+    color: white;
 }
+
