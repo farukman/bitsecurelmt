@@ -61,6 +61,6 @@ production:
   database: sql3761380
   pool: 5
   username: freedb_Bitsecure
-  password: %m2#8AWSYrDMbvT
+  password: m2#8AWSYrDMbvT
   host: sql.freedb.tech
   port: 3306
