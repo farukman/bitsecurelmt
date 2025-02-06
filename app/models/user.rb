@@ -7,8 +7,8 @@ class User < ApplicationRecord
 
   private
 
-  def send_signup_notification
-    UserMailer.user_signup_notification(self).deliver_later
-  end
+  # def send_signup_notification
+  #   UserMailer.user_signup_notification(self).deliver_later
+  # end
 end
 
