@@ -60,7 +60,7 @@ production:
   reconnect: false
   database: sql3761380
   pool: 5
-  username: sql3761380
-  password: bXZSWaqMSK
-  host: sql3.freesqldatabase.com
+  username: freedb_Bitsecure
+  password: %m2#8AWSYrDMbvT
+  host: sql.freedb.tech
   port: 3306
