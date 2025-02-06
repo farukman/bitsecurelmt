@@ -61,15 +61,33 @@
   # end
 # end
 
+# class Users::RegistrationsController < Devise::RegistrationsController
+#   before_action :configure_permitted_parameters, if: :devise_controller?
+
+#   # Overriding the create action
+#   def create
+#     super do |user|
+#       # Send the email after the user has been created
+#       UserMailer.user_signup_notification(user).deliver_later if user.persisted?
+#     end
+#   end
+
+#   protected
+
+#   # Ensure that username is permitted during sign-up and account update
+#   def configure_permitted_parameters
+#     devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
+#     devise_parameter_sanitizer.permit(:account_update, keys: [:username])
+#   end
+# end
+
+
 class Users::RegistrationsController < Devise::RegistrationsController
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   # Overriding the create action
   def create
-    super do |user|
-      # Send the email after the user has been created
-      UserMailer.user_signup_notification(user).deliver_later if user.persisted?
-    end
+    super
   end
 
   protected
