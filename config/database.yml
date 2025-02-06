@@ -61,6 +61,6 @@ production:
   database: defaultdb
   pool: 5
   username: avnadmin
-  password: AVNS_YIyAF8huF8Igjceoa5
+  password: AVNS_YIyAF8huF8ISgjceoa5
   host: mysql-3abdd3a7-bitsecure-1972.h.aivencloud.com
   port: 26458
