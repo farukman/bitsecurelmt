@@ -58,9 +58,9 @@ production:
   adapter: mysql2
   encoding: utf8mb4
   reconnect: false
-  database: sql3761380
+  database: defaultdb
   pool: 5
-  username: freedb_Bitsecure
-  password: m2#8AWSYrDMbvT
-  host: sql.freedb.tech
-  port: 3306
+  username: avnadmin
+  password: AVNS_YlyAF8huF8lSgjceoa5
+  host: mysql-3abdd3a7-bitsecure-1972.h.aivencloud.com
+  port: 26458
