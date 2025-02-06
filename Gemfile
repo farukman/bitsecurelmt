@@ -18,7 +18,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 gem "mysql2"
 
-gem 'activerecord-mysql2-adapter', github: 'rails/rails'
+github: 'rails/rails'
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
