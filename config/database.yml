@@ -56,11 +56,13 @@ test:
 
 production:
   adapter: mysql2
-  encoding: utf8mb4
-  reconnect: false
+  host: mysql-c87bede-xmentits2-d651.h.aivencloud.com
+  port: 14005
   database: defaultdb
-  pool: 5
   username: avnadmin
-  password: AVNS_YIyAF8huF8ISgjceoa5
-  host: mysql-3abdd3a7-bitsecure-1972.h.aivencloud.com
-  port: 26458
+  password: 'AVNS_CBWQOMmPcasiNYg8y0c'
+  sslverify: false # Optional, if you want to disable certificate verification
+  encoding: utf8
+  pool: 5
+  timeout: 5000
+
