@@ -515,7 +515,6 @@ body {
    }
    footer .nav-links {
      display: flex;
-     gap: 8px;
    }
    footer .nav-links a {
      color: white;
