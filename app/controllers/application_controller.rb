@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!, except: [:index, :about, :contact]
 
   def after_sign_in_path_for(resource)
     dashboard_path
